@@ -1,0 +1,89 @@
+/*
+ * Sorridents Aparecida de Goiânia - Premium Stylesheet
+ */
+
+/* Clean font configurations and smooth scroll offsets */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for floating sticky header */
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Custom Display font classes */
+.font-display {
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+/* Before & After Interactive Range Input Thumb Reset & Sizing */
+#before-after-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  cursor: ew-resize;
+  border-radius: 50%;
+}
+
+#before-after-slider input[type="range"]::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  cursor: ew-resize;
+  border: none;
+  border-radius: 50%;
+}
+
+/* Animations for premium interactive feeling (replacing React Motion) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.on-scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.on-scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom gradient background animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
