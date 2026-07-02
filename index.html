@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorridents Aparecida de Goiânia | Clínica Odontológica Premium</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./logo-sorridents.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Style entry point -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-purple': '#1b2074',
+              'brand-red': '#e31c24',
+              'brand-blue': '#00aeef',
+              'brand-green': '#009639',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Lucide Icon System -->
+    <script src="https://unpkg.com/lucide@0.474.0/dist/umd/lucide.min.js"></script>
+  </head>
+  <body class="min-h-screen bg-slate-50 antialiased font-sans text-slate-800">
+
+    <!-- 1. UNIVERSAL STICKY HEADER & FLOATING NAVIGATION -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#007ebb]/95 backdrop-blur-md shadow-sm border-b border-sky-600/30 py-3 sm:py-3.5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a href="#inicio" class="flex items-center space-x-3 select-none group" id="sorridents-logo">
+            <img 
+              src="./logo-sorridents.png" 
+              alt="Sorridents" 
+              class="w-10 h-10 shrink-0 rounded-xl shadow-md object-contain img-fallback"
+              data-fallback="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=120&q=80"
+              referrerpolicy="no-referrer"
+            />
+            <div class="flex flex-col leading-none">
+              <span class="font-black tracking-tight font-sans text-xl sm:text-2xl md:text-3xl">
+                <span class="text-[#1b2074]">S</span><span class="text-[#e31c24]">o</span><span class="text-[#00aeef]">r</span><span class="text-[#009639]">r</span><span class="text-[#1b2074]">í</span><span class="text-[#e31c24]">d</span><span class="text-[#00aeef]">e</span><span class="text-[#009639]">n</span><span class="text-[#1b2074]">t</span><span class="text-[#00aeef]">s</span>
+              </span>
+              <span class="font-bold tracking-widest uppercase text-[7px] sm:text-[9px] text-sky-100 mt-0.5">
+                Clínicas Odontológicas
+              </span>
+            </div>
+            <span class="text-[10px] bg-white/10 border border-white/20 text-white px-2 py-0.5 rounded font-bold uppercase tracking-widest leading-none hidden sm:inline-block ml-2">
+              Aparecida de Goiânia
+            </span>
+          </a>
+
+          <!-- Desktop Menu links -->
+          <nav class="hidden lg:flex items-center space-x-4 xl:space-x-6" id="desktop-nav">
+            <a href="#inicio" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="home" class="w-4 h-4 shrink-0"></i>
+              <span>Início</span>
+            </a>
+            <a href="#sobre" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="info" class="w-4 h-4 shrink-0"></i>
+              <span>Sobre</span>
+            </a>
+            <a href="#servicos" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="stethoscope" class="w-4 h-4 shrink-0"></i>
+              <span>Serviços</span>
+            </a>
+            <a href="#galeria" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="image" class="w-4 h-4 shrink-0"></i>
+              <span>Galeria</span>
+            </a>
+            <a href="#depoimentos" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="star" class="w-4 h-4 shrink-0"></i>
+              <span>Depoimentos</span>
+            </a>
+            <a href="#faq" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="help-circle" class="w-4 h-4 shrink-0"></i>
+              <span>Dúvidas</span>
+            </a>
+            <a href="#localizacao" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-4 h-4 shrink-0"></i>
+              <span>Localização</span>
+            </a>
+            <a href="#contato" class="text-sm font-semibold transition-colors hover:text-sky-200 text-white flex items-center gap-1.5">
+              <i data-lucide="phone" class="w-4 h-4 shrink-0"></i>
+              <span>Contato</span>
+            </a>
+          </nav>
+
+          <!-- Action Button Desktop -->
+          <div class="hidden lg:flex items-center" id="desktop-cta">
+            <a
+              href="https://wa.me/556282790106?text=Olá! Gostaria de agendar uma consulta na Sorridents Aparecida."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-white text-[#007ebb] font-semibold text-sm shadow-md hover:bg-sky-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
+            >
+              <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+              Agendar Consulta
+            </a>
+          </div>
+
+          <!-- Mobile Toggle Indicator Button -->
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg text-white hover:text-sky-200 hover:bg-white/10 focus:outline-none transition-colors" aria-label="Alternar menu">
+            <i data-lucide="menu" id="menu-icon-hamburger" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile dropdown tray -->
+      <div id="mobile-menu-tray" class="hidden lg:hidden bg-[#007ebb] border-t border-sky-600/30 shadow-xl overflow-hidden mt-3 transition-all duration-300">
+        <div class="px-4 pt-3 pb-6 space-y-3 sm:px-6">
+          <a href="#inicio" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="home" class="w-5 h-5 shrink-0"></i>
+            <span>Início</span>
+          </a>
+          <a href="#sobre" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="info" class="w-5 h-5 shrink-0"></i>
+            <span>Quem Somos</span>
+          </a>
+          <a href="#servicos" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="stethoscope" class="w-5 h-5 shrink-0"></i>
+            <span>Especialidades</span>
+          </a>
+          <a href="#galeria" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="image" class="w-5 h-5 shrink-0"></i>
+            <span>Galeria</span>
+          </a>
+          <a href="#depoimentos" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="star" class="w-5 h-5 shrink-0"></i>
+            <span>Avaliações</span>
+          </a>
+          <a href="#faq" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="help-circle" class="w-5 h-5 shrink-0"></i>
+            <span>Dúvidas Frequentes</span>
+          </a>
+          <a href="#localizacao" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="map-pin" class="w-5 h-5 shrink-0"></i>
+            <span>Localização</span>
+          </a>
+          <a href="#contato" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-semibold text-white hover:text-sky-100 hover:bg-white/10 transition-all flex items-center gap-2.5">
+            <i data-lucide="phone" class="w-5 h-5 shrink-0"></i>
+            <span>Contato</span>
+          </a>
+          <div class="pt-4 border-t border-white/10">
+            <a
+              href="https://wa.me/556282790106?text=Olá! Gostaria de agendar uma consulta na Sorridents Aparecida."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#009639] text-white font-bold shadow-md hover:bg-[#009639]/90 transition-all"
+            >
+              <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-[76px] sm:pt-[84px]">
+      <!-- 2. HERO SECTION -->
+      <section 
+        id="inicio" 
+        class="relative isolate flex items-center py-6 sm:py-8 md:py-10 lg:py-12 min-h-[calc(100vh-76px)] sm:min-h-[calc(100vh-84px)] lg:min-h-[calc(100vh-90px)] overflow-hidden bg-scroll md:bg-fixed"
+        style="background-image: url('./Fundo Background Sorridents.jpg');"
+      >
+        <!-- Camada de overlay/degradê azul semitransparente para legibilidade premium -->
+        <div class="absolute inset-0 bg-[#1b2074]/70 -z-10"></div>
+        
+        <!-- Grid sutil para textura e refinamento de design -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(0,174,239,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(0,174,239,0.01)_1px,transparent_1px)] [background-size:40px_40px] -z-10"></div>
+        <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#1b2074]/15 to-transparent -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Contêiner transparente para textos da Hero, maximizando sofisticação e legibilidade -->
+            <div class="lg:col-span-7 w-full relative animate-hero-entrance px-0 flex flex-col justify-center items-center text-center sm:items-start sm:text-left">
+              
+              <!-- Assinatura Completa da Sorridents na Hero (Reforço de Marca - Visível Apenas no Mobile) -->
+              <div class="flex sm:hidden justify-center items-center space-x-3 mb-5 select-none">
+                <img 
+                  src="./logo-sorridents.png" 
+                  alt="Sorridents" 
+                  class="h-8 w-auto rounded-xl shadow-md object-contain img-fallback"
+                  data-fallback="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=120&q=80"
+                  referrerpolicy="no-referrer"
+                />
+                <div class="flex flex-col leading-none text-left">
+                  <span class="font-black tracking-tight font-sans text-lg text-white">
+                    <span class="text-white">S</span><span class="text-[#e31c24]">o</span><span class="text-[#00aeef]">r</span><span class="text-[#009639]">r</span><span class="text-white">í</span><span class="text-[#e31c24]">d</span><span class="text-[#00aeef]">e</span><span class="text-[#009639]">n</span><span class="text-white">t</span><span class="text-[#00aeef]">s</span>
+                  </span>
+                  <span class="font-bold tracking-widest uppercase text-[6px] text-slate-300 mt-0.5">
+                    Clínicas Odontológicas
+                  </span>
+                </div>
+              </div>
+
+              <span class="hidden sm:inline-flex items-center px-3.5 py-1 rounded-full bg-white/10 text-white border border-white/20 text-xs font-extrabold tracking-wider uppercase mb-3 md:mb-4 lg:mb-5">
+                Clínica Odontológica em Aparecida
+              </span>
+              
+              <h1 class="text-[34px] sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight sm:leading-[1.05] mb-4 sm:mb-5 font-display hero-text-shadow-mobile">
+                Milhões de sorrisos transformados. <br class="hidden sm:inline" />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00aeef] via-sky-300 to-emerald-400 font-black">
+                  O próximo pode ser o seu.
+                </span>
+              </h1>
+
+              <p class="text-sm xs:text-base sm:text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto sm:mx-0 mb-5 sm:mb-6 font-medium hero-text-shadow-mobile">
+                Na Sorridents Aparecida de Goiânia, unimos tecnologia moderna e atendimento humanizado para transformar sorrisos com conforto, segurança e qualidade.
+              </p>
+
+              <!-- Gatilhos de Autoridade da Franquia -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 py-4 my-5 border-t border-b border-white/20 max-w-2xl mx-auto sm:mx-0 text-white">
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start text-center sm:text-left gap-2">
+                  <div class="p-1.5 bg-white/10 rounded-lg text-[#e31c24] shrink-0 border border-white/10">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-extrabold leading-tight text-slate-100">Mais premiada do Brasil</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start text-center sm:text-left gap-2">
+                  <div class="p-1.5 bg-white/10 rounded-lg text-[#00aeef] shrink-0 border border-white/10">
+                    <i data-lucide="users" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-extrabold leading-tight text-slate-100">Mais de 6 milhões de pacientes atendidos</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start text-center sm:text-left gap-2">
+                  <div class="p-1.5 bg-white/10 rounded-lg text-sky-300 shrink-0 border border-white/10">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-extrabold leading-tight text-slate-100">Rede consolidada em todo o país</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start text-center sm:text-left gap-2">
+                  <div class="p-1.5 bg-white/10 rounded-lg text-[#009639] shrink-0 border border-white/10">
+                    <i data-lucide="smile" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-[10px] sm:text-[11px] font-extrabold leading-tight text-slate-100">Milhares de sorrisos transformados</span>
+                </div>
+              </div>
+
+              <!-- Main Interactive CTAs -->
+              <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 sm:gap-4 mb-6 sm:mb-8 w-full">
+                <a
+                  href="https://wa.me/556282790106?text=Olá! Gostaria de agendar uma consulta na Sorridents Aparecida de Goiânia."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 bg-gradient-to-r from-[#009639] to-emerald-500 text-white font-extrabold text-sm sm:text-base shadow-lg shadow-green-600/20 hover:from-[#009639]/90 hover:to-emerald-500/90 hover:shadow-green-600/35 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer rounded-2xl ring-1 ring-white/40"
+                >
+                  <i data-lucide="phone" class="w-4 h-4 mr-2.5 animate-pulse"></i>
+                  Agendar pelo WhatsApp
+                </a>
+                <a
+                  href="#servicos"
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 rounded-2xl border-2 border-white/20 bg-white/10 backdrop-blur-sm font-extrabold text-white hover:bg-white/20 hover:border-white/35 transition-all duration-300 cursor-pointer text-sm tracking-wide shadow-sm"
+                >
+                  Ver Especialidades
+                </a>
+              </div>
+
+              <!-- Feature Checks -->
+              <div class="grid grid-cols-3 gap-2 border-t border-white/20 pt-4 sm:pt-6 max-w-2xl mx-auto sm:mx-0">
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:space-x-2 text-slate-200 text-center sm:text-left">
+                  <i data-lucide="check-square" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mb-0.5 sm:mb-0"></i>
+                  <span class="text-[10px] sm:text-xs font-bold leading-tight text-white">Raio X Panorâmico</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:space-x-2 text-slate-200 text-center sm:text-left">
+                  <i data-lucide="check-square" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mb-0.5 sm:mb-0"></i>
+                  <span class="text-[10px] sm:text-xs font-bold leading-tight text-white">Estacionamento</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center sm:justify-start sm:space-x-2 text-slate-200 text-center sm:text-left">
+                  <i data-lucide="check-square" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400 shrink-0 mb-0.5 sm:mb-0"></i>
+                  <span class="text-[10px] sm:text-xs font-bold leading-tight text-white">Doutores Especialistas</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Imagem da fachada da Sorridents no lado direito -->
+            <div class="hidden lg:flex lg:col-span-5 w-full relative animate-hero-entrance justify-center lg:justify-end mt-8 lg:mt-0">
+              <div class="w-full max-w-md lg:max-w-full animate-float">
+                <div class="relative group rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-white/5 backdrop-blur-sm transition-all duration-500 hover:scale-[1.03] hover:shadow-sky-500/25 hover:border-white/40">
+                  <img 
+                    src="./Fachada Sorridents.jpg" 
+                    alt="Fachada da Sorridents Aparecida de Goiânia" 
+                    class="w-full h-auto object-cover rounded-[2.25rem] aspect-[4/3] lg:aspect-square xl:aspect-[4/3]"
+                  />
+                  <!-- Subtle overlay details/badge -->
+                  <div class="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md text-white p-3.5 rounded-2xl flex items-center justify-between text-xs border border-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <span class="font-bold text-sm">Nossa Fachada</span>
+                    <span class="text-sky-300 flex items-center gap-1.5 font-semibold">
+                      <i data-lucide="map-pin" class="w-4 h-4 text-sky-400"></i>
+                      Unidade Aparecida
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. GALERIA & ESTRUTURA SECTION -->
+      <section id="galeria" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-black uppercase tracking-wider text-[#1b2074] bg-[#1b2074]/5 px-3 py-1 rounded-md w-max mb-4 block mx-auto font-sans">Nossa Estrutura</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 font-display">
+              Conheça nossa <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b2074] via-[#e31c24] via-[#009639] to-[#00aeef] font-black">estrutura</span>
+            </h2>
+            <p class="text-slate-500 text-sm sm:text-base leading-relaxed font-semibold font-sans">
+              Ambientes modernos, confortáveis e preparados para oferecer a melhor experiência aos nossos pacientes.
+            </p>
+          </div>
+
+          <!-- Swiper Container -->
+          <div class="relative px-0 md:px-12">
+            <div class="swiper gallery-swiper overflow-hidden rounded-2xl">
+              <div class="swiper-wrapper">
+                <!-- Slide 1: Fachada da Clínica -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Fachada Sorridents.jpg" 
+                      alt="Fachada Sorridents Aparecida de Goiânia" 
+                      class="w-full h-auto object-contain p-2 sm:absolute sm:inset-0 sm:m-auto sm:max-w-full sm:max-h-full sm:p-2 group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+                <!-- Slide 2: Ambiente 1 -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Foto Ambiente 1.jpeg" 
+                      alt="Ambiente Clínica" 
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+                <!-- Slide 3: Ambiente 2 -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Foto Ambiente 2.jpeg" 
+                      alt="Recepção" 
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1513224502586-d1e602410265?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+                <!-- Slide 4: Ambiente 3 -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Foto Ambiente 3.jpeg" 
+                      alt="Sala de Consulta" 
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+                <!-- Slide 5: Ambiente 4 -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Foto Ambiente 4.jpeg" 
+                      alt="Ambiente 4" 
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1513224502586-d1e602410265?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+                <!-- Slide 6: Ambiente 5 -->
+                <div class="swiper-slide">
+                  <div class="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200/50 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300">
+                    <img 
+                      src="./Foto Ambiente 5.jpeg" 
+                      alt="Ambiente 5" 
+                      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500 img-fallback"
+                      data-fallback="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                      referrerpolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navegação (Setas) - Desktop -->
+            <div class="swiper-button-prev !hidden md:!flex !w-12 !h-12 !bg-white border border-slate-200 text-[#007ebb] hover:bg-slate-50 rounded-full shadow-md after:!hidden !left-0 -ml-6 transition-all duration-300 items-center justify-center cursor-pointer">
+              <i data-lucide="chevron-left" class="w-6 h-6 shrink-0"></i>
+            </div>
+            <div class="swiper-button-next !hidden md:!flex !w-12 !h-12 !bg-white border border-slate-200 text-[#007ebb] hover:bg-slate-50 rounded-full shadow-md after:!hidden !right-0 -mr-6 transition-all duration-300 items-center justify-center cursor-pointer">
+              <i data-lucide="chevron-right" class="w-6 h-6 shrink-0"></i>
+            </div>
+
+            <!-- Paginação (Bullets) - Mobile & Desktop -->
+            <div class="swiper-pagination !bottom-[-2rem]"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SERVIÇOS/ESPECIALIDADES SECTION -->
+      <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-black uppercase tracking-wider text-[#1b2074] bg-[#1b2074]/5 px-3 py-1 rounded-md w-max mb-4 block mx-auto">Nossas Especialidades</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 font-display">
+              Tratamentos especializados em <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b2074] via-[#e31c24] via-[#009639] to-[#00aeef] font-black font-sans">todas as áreas da odontologia</span>
+            </h2>
+            <p class="text-slate-500 text-sm sm:text-base leading-relaxed font-semibold">
+              Unimos materiais de padrão ouro, tecnologia de escaneamento e profissionais de alto nível para garantir resultados surpreendentes.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Specialty 1: Clínico Geral -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Clinico.png" alt="Clínico Geral" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Clínico Geral</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Clínico Geral</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    Prevenção, diagnóstico e tratamentos fundamentais como limpeza, restaurações e tratamentos de canal. O ponto de partida para a saúde bucal.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Clínico Geral." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specialty 2: Odontopediatria -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Odontopediatria.png" alt="Odontopediatria" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Odontopediatria</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Odontopediatria</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    Cuidado lúdico, acolhedor e especializado para bebês, crianças e adolescentes. Criando experiências positivas desde a infância.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Odontopediatria." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specialty 3: Implantes Dentários -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Implantes-Dentarios.png" alt="Implantes Dentários" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Implantes Dentários</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Implantes Dentários</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    A tecnologia mais avançada para recuperar dentes perdidos com segurança e naturalidade, devolvendo sua força mastigatória e autoestima.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Implantes Dentários." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specialty 4: Ortodontia & Aparelhos -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Ortodontia-Aparelhos.png" alt="Ortodontia & Aparelhos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Ortodontia & Aparelhos</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Ortodontia & Aparelhos</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    Aparelhos modernos metálicos, estéticos (safira) ou autoligáveis. Correções precisas para um sorriso alinhado em qualquer idade.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Ortodontia." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specialty 5: Sorridents Aligner -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Sorridents-Aligner.png" alt="Sorridents Aligner" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Sorridents Aligner</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Sorridents Aligner</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    Os alinhadores invisíveis da própria Sorridents. Praticidade extrema, estética perfeita e tratamentos planejados em tecnologia 3D.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Sorridents Aligner." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Specialty 6: Estética & Harmonização Facial -->
+            <div class="group relative h-96 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
+              <img src="./Estetica.png" alt="Estética & Harmonização Facial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent transition-all duration-300 group-hover:opacity-0"></div>
+              <div class="absolute inset-x-0 bottom-0 p-6 transition-all duration-300 group-hover:translate-y-4 group-hover:opacity-0">
+                <h3 class="text-xl font-bold font-display text-white uppercase tracking-wider">Estética & Harmonização Facial</h3>
+              </div>
+              <div class="absolute inset-0 bg-[#1b2074]/95 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex flex-col justify-between p-8 text-white">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-300">Especialidade</span>
+                  <h3 class="text-2xl font-extrabold font-display mt-2 border-b border-white/10 pb-3">Estética & Harmonização Facial</h3>
+                  <p class="text-sm text-slate-200 leading-relaxed mt-4">
+                    Clareamento dental a laser, lentes de porcelana e harmonização facial (toxina botulínica e preenchimentos) para o sorriso dos seus sonhos.
+                  </p>
+                </div>
+                <a href="https://wa.me/556282790106?text=Olá! Quero agendar uma consulta para Estética e Harmonização." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#009639] to-emerald-500 text-white hover:shadow-lg transition-all">
+                  Agendar Consulta <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- 3. ANTES E DEPOIS SECTION -->
+      <section class="py-16 bg-white/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="relative flex flex-col justify-center items-center">
+            
+            <!-- Slider Frame -->
+            <div id="before-after-slider" class="relative w-full max-w-3xl rounded-3xl overflow-hidden shadow-[0_30px_80px_-35px_rgba(27,32,116,0.45)] border-[10px] border-white/90 bg-white shadow-lg">
+              <div class="relative h-[280px] sm:h-[340px] md:h-[420px] w-full select-none overflow-hidden">
+                
+                <!-- Before image layer -->
+                <div class="absolute inset-0 w-full h-full">
+                  <img
+                    id="slider-before-img"
+                    src="./Foto Reabilitação Implante Antes.jpeg"
+                    alt="Antes do tratamento"
+                    class="w-full h-full object-cover img-fallback"
+                    data-fallback="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div id="slider-before-badge" class="absolute bottom-4 left-4 z-10 bg-slate-900/70 backdrop-blur-sm text-white px-3 py-1 rounded-lg text-xs font-extrabold uppercase tracking-wide">
+                    Antes (Implante)
+                  </div>
+                </div>
+
+                <!-- After image layer -->
+                <div id="hero-slider-after-layer" class="absolute inset-0 w-full h-full overflow-hidden transition-all duration-75" style="clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%)">
+                  <img
+                    id="slider-after-img"
+                    src="./Foto Reabilitação Implante Depois.jpeg"
+                    alt="Após tratamento"
+                    class="absolute inset-0 w-full h-[280px] sm:h-[340px] md:h-[420px] object-cover img-fallback"
+                    data-fallback="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="absolute bottom-4 right-4 z-10 bg-[#009639] text-white px-3 py-1 rounded-lg text-xs font-extrabold uppercase tracking-wide shadow-md">
+                    Depois Sorridents
+                  </div>
+                </div>
+
+                <!-- Slider vertical line guide and handle -->
+                <div id="hero-slider-handle" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-[25] flex items-center justify-center" style="left: 50%">
+                  <div class="w-8 h-8 bg-white text-slate-700 shadow-xl rounded-full border border-slate-200 flex items-center justify-center shrink-0">
+                    <svg class="w-4 h-4 text-slate-700 fill-current" viewBox="0 0 24 24">
+                      <path d="M7 10l-5 5 5 5v-10zm10 0l5 5-5 5v-10z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Range input invisible overlay -->
+                <input id="hero-slider-input" type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" aria-label="Controle de Simulação" />
+              </div>
+
+              <!-- Slider details card footer -->
+              <div class="p-5 sm:p-6 bg-gradient-to-b from-slate-50 to-white border-t border-slate-100">
+                <h3 class="text-lg sm:text-xl font-black text-[#1b2074] tracking-tight leading-snug">
+                  Transformações que renovam sorrisos.
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 font-medium">
+                  Tratamentos modernos, atendimento humanizado e resultados que elevam sua confiança e bem-estar.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between mt-5 pt-4 border-t border-slate-200/60 gap-4 text-xs font-sans">
+                  <div class="flex items-center text-slate-500 font-semibold">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-500 mr-1.5 shrink-0 animate-pulse"></i>
+                    <span>Seu sorriso na melhor versão</span>
+                  </div>
+                  <a
+                    href="https://wa.me/556282790106?text=Olá! Vi o simulador de antes/depois no site e gostaria de agendar uma consulta na Sorridents Aparecida."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#009639] text-white font-black text-xs uppercase tracking-wide shadow-md shadow-green-600/15 hover:bg-[#009639]/90 hover:shadow-lg transition-all duration-300 gap-1.5 cursor-pointer text-center"
+                  >
+                    <span>Agendar Avaliação</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4 text-[11px] font-semibold text-slate-500 bg-white/70 backdrop-blur-sm border border-slate-200/70 px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-sm">
+              <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00aeef] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00aeef]"></span>
+              </span>
+              <span>Arraste o cursor horizontalmente sobre a imagem para ver o resultado</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. SOBRE A CLÍNICA SECTION -->
+      <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col justify-center text-center items-center">
+              <span class="text-xs font-black uppercase tracking-wider text-[#1b2074] bg-[#1b2074]/5 px-3 py-1 rounded-md w-max mb-4">Quem Somos</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6 font-display">
+                A clínica odontológica mais premiada e pensada para <span class="text-[#1b2074]">toda a sua família</span>.
+              </h2>
+              
+              <div class="space-y-4 text-slate-600 text-base leading-relaxed mb-8 font-medium max-w-3xl mx-auto">
+                <p>
+                  Na <strong>Sorridents,</strong> acreditamos que cuidar do sorriso deve ser algo simples, agradável e acessível a todos. Somos pioneiros em trazer a odontologia estética de alto padrão de um jeito acolhedor e sem complicações. Aqui na nossa unidade de <strong>Aparecida de Goiânia</strong>, Você vai encontrar um espaço moderno, confortável e equipado com a tecnologia mais avançada do mercado.
+                </p>
+                <p>
+                  Cada detalhe da clínica foi pensado para você se sentir seguro e à vontade: da recepção acolhedora, ao nosso raio X panorâmico, até os gabinetes modernos e bem planejados. Nosso objetivo é que seu tratamento seja uma experiência tranquila, transparente e, por que não, até prazerosa!
+                </p>
+              </div>
+
+              <!-- Info Card Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slate-50/70 p-6 rounded-3xl border border-slate-100 w-full text-left">
+                <div class="flex space-x-3.5 items-start group hover:bg-white p-3 rounded-2xl transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-100">
+                  <div class="p-2.5 bg-white rounded-2xl shadow-sm shrink-0 border border-purple-100 text-[#1b2074]">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-black text-[#1b2074] mb-1">Segurança & Rigor</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Trabalhamos sob os mais rígidos padrões internacionais de biossegurança e esterilização.</p>
+                  </div>
+                </div>
+
+                <div class="flex space-x-3.5 items-start group hover:bg-white p-3 rounded-2xl transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-100">
+                  <div class="p-2.5 bg-white rounded-2xl shadow-sm shrink-0 border border-red-100 text-[#e31c24]">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-black text-[#1b2074] mb-1">Padrão de Qualidade</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Lentes importadas, implantes certificados e tecnologia 3D integrada ao diagnóstico.</p>
+                  </div>
+                </div>
+
+                <div class="flex space-x-3.5 items-start group hover:bg-white p-3 rounded-2xl transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-100">
+                  <div class="p-2.5 bg-white rounded-2xl shadow-sm shrink-0 border border-sky-100 text-[#00aeef]">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-black text-[#1b2074] mb-1">Humanização Real</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Tratamentos pensados para minimizar o estresse dentário e acolher sem medo.</p>
+                  </div>
+                </div>
+
+                <div class="flex space-x-3.5 items-start group hover:bg-white p-3 rounded-2xl transition-all duration-300 hover:shadow-md border border-transparent hover:border-slate-100">
+                  <div class="p-2.5 bg-white rounded-2xl shadow-sm shrink-0 border border-green-100 text-[#009639]">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-black text-[#1b2074] mb-1">Solução Completa</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">Desde a prevenção trivial até reabilitações completas e harmonização avançada.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. DIFERENCIAIS SECTION -->
+      <section id="diferenciais" class="py-20 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <!-- Left Side -->
+            <div class="lg:col-span-5 flex flex-col justify-center">
+              <span class="text-xs font-black uppercase tracking-wider text-[#1b2074] bg-[#1b2074]/5 px-3 py-1 rounded-md w-max mb-4 block">Por que escolher a Sorridents?</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6 font-display">
+                A melhor e mais <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b2074] via-[#00aeef] via-[#009639] to-[#e31c24] font-black">
+                  completa estrutura
+                </span> <br />
+                de tratamento odontológico
+              </h2>
+              <p class="text-slate-500 text-sm sm:text-base leading-relaxed mb-8 font-medium">
+                A nossa unidade da Avenida da Igualdade em Aparecida conta com diferenciais pensados detalhadamente para oferecer tranquilidade e precisão absoluta em suas consultas.
+              </p>
+            </div>
+
+            <!-- Right Side Card Grid -->
+            <div class="lg:col-span-7">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-200/50 hover:border-[#1b2074]/25 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative group overflow-hidden shadow-sm">
+                  <div class="mb-5 inline-flex p-3.5 bg-[#1b2074]/5 text-[#1b2074] rounded-2xl group-hover:bg-[#1b2074] group-hover:text-white transition-all duration-300 shadow-sm border border-purple-100/30">
+                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="text-base font-extrabold text-slate-900 mb-2 leading-tight group-hover:text-[#1b2074] transition-colors font-display">Profissionais Especialistas</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed font-semibold">Equipe de cirurgiões-dentistas altamente qualificados e em constante especialização.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-200/50 hover:border-[#e31c24]/25 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative group overflow-hidden shadow-sm">
+                  <div class="mb-5 inline-flex p-3.5 bg-[#e31c24]/5 text-[#e31c24] rounded-2xl group-hover:bg-[#e31c24] group-hover:text-white transition-all duration-300 shadow-sm border border-red-100/30">
+                    <i data-lucide="cpu" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="text-base font-extrabold text-slate-900 mb-2 leading-tight group-hover:text-[#e31c24] transition-colors font-display">Tecnologia de Ponta</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed font-semibold">Diagnósticos digitais, scanners intraorais e planejamento 3D integrados de ponta.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-200/50 hover:border-[#00aeef]/25 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative group overflow-hidden shadow-sm">
+                  <div class="mb-5 inline-flex p-3.5 bg-[#00aeef]/5 text-[#00aeef] rounded-2xl group-hover:bg-[#00aeef] group-hover:text-white transition-all duration-300 shadow-sm border border-sky-100/30">
+                    <i data-lucide="smile" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="text-base font-extrabold text-slate-900 mb-2 leading-tight group-hover:text-[#00aeef] transition-colors font-display">Atendimento Acolhedor</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed font-semibold">Tratamento humanizado focado em biossegurança e acolher com o máximo carinho.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-8 rounded-3xl bg-white border border-slate-200/50 hover:border-[#009639]/25 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative group overflow-hidden shadow-sm">
+                  <div class="mb-5 inline-flex p-3.5 bg-[#009639]/5 text-[#009639] rounded-2xl group-hover:bg-[#009639] group-hover:text-white transition-all duration-300 shadow-sm border border-green-100/30">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="text-base font-extrabold text-slate-900 mb-2 leading-tight group-hover:text-[#009639] transition-colors font-display">Estrutura & Facilidade</h4>
+                  <p class="text-xs text-slate-500 leading-relaxed font-semibold">Instalações modernas na Avenida da Igualdade, com acessibilidade e estacionamento.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. PROVA SOCIAL & DEPOIMENTOS -->
+      <section id="depoimentos" class="py-20 bg-[#1b2074] text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="text-center max-w-2xl mx-auto mb-16 flex flex-col items-center">
+            <span class="text-xs font-black uppercase tracking-wider text-sky-300 bg-white/10 px-3 py-1 rounded-md w-max mb-4 block mx-auto">Depoimentos dos Pacientes</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-white font-display">
+              A opinião de quem já escolheu <br />
+              <span class="text-[#00aeef]">transformar o sorriso conosco</span>
+            </h2>
+            <p class="text-purple-100 text-sm sm:text-base leading-relaxed font-semibold">
+              Nossos pacientes do Google valorizam o atendimento ético, carinho profissional e resultados incomparáveis. Descubra algumas experiências:
+            </p>
+            
+            <!-- Google Review Trust Badge -->
+            <div class="mt-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-2xl shadow-lg text-xs font-semibold text-white max-w-max mx-auto transition-all duration-300 hover:bg-white/15">
+              <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+              </svg>
+              <div class="flex flex-col text-left leading-tight">
+                <span class="font-extrabold text-[11px] text-white flex items-center gap-1">
+                  Avaliações Verificadas no Google 
+                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400 fill-emerald-400/20 shrink-0"></i>
+                </span>
+                <span class="text-[10px] text-slate-300 font-medium">Nota 4.9 de 5 estrelas baseada em feedbacks de pacientes reais</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-purple-950/40 backdrop-blur-md rounded-3xl p-6 lg:p-8 border border-purple-800/40 shadow-xl flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="flex text-amber-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <i data-lucide="quote" class="w-8 h-8 text-purple-800/80 shrink-0"></i>
+                </div>
+                <p class="text-purple-100 text-sm italic leading-relaxed mb-6 font-medium">"Atendimento e serviços muito bons!<br />Super satisfeita.."</p>
+              </div>
+              <div class="border-t border-purple-800/50 pt-4 flex justify-between items-center">
+                <h4 class="font-bold text-sm text-white">Ana Pereira dos Santos</h4>
+                <div class="flex items-center gap-1 text-[10px] text-slate-300 font-bold bg-white/5 border border-white/10 px-2 py-0.5 rounded-md">
+                  <svg class="w-3 h-3" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                  </svg>
+                  <span>Google</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-purple-950/40 backdrop-blur-md rounded-3xl p-6 lg:p-8 border border-purple-800/40 shadow-xl flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="flex text-amber-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <i data-lucide="quote" class="w-8 h-8 text-purple-800/80 shrink-0"></i>
+                </div>
+                <p class="text-purple-100 text-sm italic leading-relaxed mb-6 font-medium">"Eu estou simplesmente encantada com o atendimento e a empatia de toda a equipe, me trataram com carinho e respeito a todo momento. Pra quem tem medo de dentista não tem lugar melhor!"</p>
+                <!-- Resposta do proprietário -->
+                <div class="mb-4 p-4 bg-[#1b2074]/30 border-l-2 border-[#00aeef] rounded-r-2xl text-xs">
+                  <div class="font-extrabold text-[10px] text-sky-300 uppercase tracking-wider mb-1">Resposta do proprietário</div>
+                  <p class="italic text-purple-100">"Obrigado pelo seu comentário!! É sempre um prazer atendê-la."</p>
+                </div>
+              </div>
+              <div class="border-t border-purple-800/50 pt-4 flex justify-between items-center">
+                <h4 class="font-bold text-sm text-white">Ane Vilela</h4>
+                <div class="flex items-center gap-1 text-[10px] text-slate-300 font-bold bg-white/5 border border-white/10 px-2 py-0.5 rounded-md">
+                  <svg class="w-3 h-3" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                  </svg>
+                  <span>Google</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-purple-950/40 backdrop-blur-md rounded-3xl p-6 lg:p-8 border border-purple-800/40 shadow-xl flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-6">
+                  <div class="flex text-amber-400">
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-amber-400 text-amber-400"></i>
+                  </div>
+                  <i data-lucide="quote" class="w-8 h-8 text-purple-800/80 shrink-0"></i>
+                </div>
+                <p class="text-purple-100 text-sm italic leading-relaxed mb-6 font-medium">"Ambiente acolhedor, atendimento maravilhoso, faz tudo lá raio x, pasta ortodôntica... Dentistas especialistas Top!!"</p>
+              </div>
+              <div class="border-t border-purple-800/50 pt-4 flex justify-between items-center">
+                <h4 class="font-bold text-sm text-white">Igor Mundim</h4>
+                <div class="flex items-center gap-1 text-[10px] text-slate-300 font-bold bg-white/5 border border-white/10 px-2 py-0.5 rounded-md">
+                  <svg class="w-3 h-3" viewBox="0 0 24 24">
+                    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                  </svg>
+                  <span>Google</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. PERGUNTAS FREQUENTES (FAQ) -->
+      <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-sm font-extrabold uppercase tracking-widest text-[#1b2074] bg-[#1b2074]/5 px-4 py-1.5 rounded-full mb-3 block w-max mx-auto font-sans">Dúvidas Frequentes</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+              Perguntas Comuns <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b2074] via-[#e31c24] to-[#00aeef] font-black">sobre nossos tratamentos</span>
+            </h2>
+            <p class="text-slate-500 text-sm sm:text-base leading-relaxed">Selecione uma das dúvidas abaixo para entender nossa postura profissional, segurança e facilidades para resgatar sua confiança integral ao sorrir.</p>
+          </div>
+
+          <!-- Accordion list -->
+          <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="faq-item bg-slate-50/50 rounded-2xl border border-slate-150 transition-all duration-300 overflow-hidden hover:border-[#1b2074]/30">
+              <button class="faq-btn w-full text-left py-5 px-6 sm:px-8 flex items-center justify-between gap-4 select-none focus:outline-none cursor-pointer">
+                <span class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-slate-400 shrink-0"></i>Como agendo minha primeira avaliação na Sorridents Aparecida?</span>
+                <span class="faq-icon p-1.5 rounded-lg bg-slate-100 text-slate-500 transition-all"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </button>
+              <div class="faq-content hidden px-6 sm:px-8 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100/80 pt-4 bg-slate-50/20">
+                É extremamente simples! Você pode clicar em qualquer botão de agendamento em nosso site para falar com nossa equipe pelo WhatsApp ou ligar diretamente no número (62) 8279-0106. Agendamos o seu horário em menos de 2 minutos para o dia e hora que forem mais confortáveis para você.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item bg-slate-50/50 rounded-2xl border border-slate-150 transition-all duration-300 overflow-hidden hover:border-[#e31c24]/30">
+              <button class="faq-btn w-full text-left py-5 px-6 sm:px-8 flex items-center justify-between gap-4 select-none focus:outline-none cursor-pointer">
+                <span class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-slate-400 shrink-0"></i>Quais são as formas de pagamento aceitas?</span>
+                <span class="faq-icon p-1.5 rounded-lg bg-slate-100 text-slate-500 transition-all"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </button>
+              <div class="faq-content hidden px-6 sm:px-8 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100/80 pt-4 bg-slate-50/20">
+                Nós facilitamos para que você possa cuidar do seu sorriso sem preocupações. Aceitamos cartões de crédito (com possibilidade de parcelamento facilitado em até 12x), Pix, débito e dinheiro. Temos opções de planos e condições de parcelamento exclusivas para tratamentos ortodônticos, implantes e reabilitações estéticas.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item bg-slate-50/50 rounded-2xl border border-slate-150 transition-all duration-300 overflow-hidden hover:border-[#009639]/30">
+              <button class="faq-btn w-full text-left py-5 px-6 sm:px-8 flex items-center justify-between gap-4 select-none focus:outline-none cursor-pointer">
+                <span class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-slate-400 shrink-0"></i>A clínica faz exames de raio-X/diagnósticos na hora?</span>
+                <span class="faq-icon p-1.5 rounded-lg bg-slate-100 text-slate-500 transition-all"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </button>
+              <div class="faq-content hidden px-6 sm:px-8 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100/80 pt-4 bg-slate-50/20">
+                Sim! A Sorridents Aparecida é equipada com raio-X digital em sua própria estrutura física. Isso significa que você não precisa se deslocar para outras clínicas de radiologia para iniciar o seu planejamento de tratamento comum. Fazemos seu escaneamento e diagnóstico de forma integrada, cômoda e super rápida na primeira consulta.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item bg-slate-50/50 rounded-2xl border border-slate-150 transition-all duration-300 overflow-hidden hover:border-[#00aeef]/30">
+              <button class="faq-btn w-full text-left py-5 px-6 sm:px-8 flex items-center justify-between gap-4 select-none focus:outline-none cursor-pointer">
+                <span class="text-sm sm:text-base font-bold text-slate-800 flex items-center gap-3"><i data-lucide="help-circle" class="w-5 h-5 text-slate-400 shrink-0"></i>O clareamento dental causa sensibilidade ou prejudica o esmalte?</span>
+                <span class="faq-icon p-1.5 rounded-lg bg-slate-100 text-slate-500 transition-all"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </button>
+              <div class="faq-content hidden px-6 sm:px-8 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100/80 pt-4 bg-slate-50/20">
+                De forma alguma! Usamos géis de clareamento importados com pH neutro e tecnologia de fotopolimerizador controlado que protege a gengiva e o dente. Além disso, antes de iniciar o clareamento clínico ou caseiro, aplicamos um protocolo dessensibilizante premium. Seus dentes ficarão brancos e totalmente saudáveis.
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom trigger help card -->
+          <div class="mt-12 bg-[#1b2074]/5 rounded-3xl p-6 sm:p-8 border border-[#1b2074]/10 text-center flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-4 text-left">
+              <div class="p-3 bg-white rounded-2xl text-[#1b2074] shadow-sm shrink-0">
+                <i data-lucide="message-square" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-extrabold text-[#1b2074] uppercase tracking-wider">Ainda tem alguma dúvida?</h4>
+                <p class="text-slate-500 text-xs sm:text-sm mt-0.5 font-medium">Nossa Central de Pacientes está pronta para conversar diretamente com você.</p>
+              </div>
+            </div>
+            <a href="https://wa.me/556282790106?text=Olá! Estava lendo as dúvidas frequentes no site e gostaria de falar com vocês sobre uma dúvida específica." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#1b2074] text-white font-bold text-sm hover:bg-[#1b2074]/95 transition shadow-md hover:shadow-lg cursor-pointer">
+              Tire suas dúvidas no WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. CONTATO & MAPA EMBEDADO -->
+      <section id="contato" class="py-20 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+            <div class="lg:col-span-6 flex flex-col justify-between space-y-8">
+              <div>
+                <span class="text-xs font-black uppercase tracking-wider text-[#1b2074] bg-[#1b2074]/5 px-3 py-1 rounded-md w-max mb-4 block">Canais de Atendimento</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#1b2074] tracking-tight leading-tight font-display">
+                  Estamos prontos para <br />
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1b2074] via-[#e31c24] via-[#009639] to-[#00aeef] font-black font-sans">receber você de braços abertos</span>
+                </h2>
+                <p class="text-slate-550 text-sm sm:text-base leading-relaxed mt-4 font-semibold">
+                  Fale diretamente com nossa atenciosa equipe de agendamentos. Evite filas e garanta o melhor horário para sua primeira avaliação.
+                </p>
+              </div>
+
+              <!-- Contact detail cards -->
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4 bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                  <div class="p-3 bg-[#1b2074]/5 text-[#1b2074] rounded-xl shrink-0">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-400">Ligamos pra você / WhatsApp</h4>
+                    <p class="text-lg font-bold text-slate-800 mt-1" id="clinic-phone">+55 62 8279-0106</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                  <div class="p-3 bg-[#1b2074]/5 text-[#1b2074] rounded-xl shrink-0">
+                    <i data-lucide="clock" class="w-5 h-5"></i>
+                  </div>
+                  <div class="w-full text-xs text-slate-600 font-semibold leading-relaxed">
+                    <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-2">Horário de Funcionamento</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-1">
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Segunda-feira:</span><span class="text-gray-500">08:00–19:00</span></div>
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Terça-feira:</span><span class="text-gray-500">08:00–19:00</span></div>
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Quarta-feira:</span><span class="text-gray-500">08:00–19:00</span></div>
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Quinta-feira:</span><span class="text-gray-500">08:00–19:00</span></div>
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Sexta-feira:</span><span class="text-gray-500">08:00–19:00</span></div>
+                      <div class="flex justify-between border-b border-gray-100 pb-0.5"><span>Sábado:</span><span class="text-gray-500">08:00–13:00</span></div>
+                      <div class="flex justify-between"><span>Domingo:</span><span class="text-gray-500">Fechado</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
+                  <div class="flex items-start space-x-4">
+                    <div class="p-3 bg-[#1b2074]/5 text-[#1b2074] rounded-xl shrink-0"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                    <div>
+                      <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-400">Localização Física</h4>
+                      <p class="text-sm font-semibold text-slate-700 mt-1 max-w-xs leading-relaxed" id="clinic-address-text">
+                        QD 114, LT 20A, Avenida da Igualdade, Aparecida de Goiânia GO, 74930-530, Brasil
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div class="flex sm:flex-col gap-2 justify-end shrink-0">
+                    <button id="copy-address-btn" class="inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold text-gray-700 border border-slate-200 rounded-xl hover:bg-slate-150 transition-colors cursor-pointer">
+                      <i data-lucide="copy" class="w-4 h-4 mr-1"></i>
+                      <span id="copy-btn-text">Copiar Endereço</span>
+                    </button>
+                    <a href="https://maps.app.goo.gl/1mj4SZGZYQGaWLKn6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold bg-[#1b2074] text-white rounded-xl hover:bg-[#1b2074]/90 transition cursor-pointer shadow-md">
+                      <i data-lucide="navigation-2" class="w-4 h-4 mr-1 fill-white"></i>
+                      Como Chegar
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right interactive Agendamento CTA Card -->
+            <div class="lg:col-span-6">
+              <div class="rounded-3xl bg-gradient-to-br from-[#1b2074] via-[#1b2074]/95 to-[#00aeef] p-8 md:p-12 text-white shadow-2xl flex flex-col justify-between h-full overflow-hidden border border-[#1b2074]/20 animate-float">
+                <div>
+                  <span class="inline-flex items-center px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-extrabold tracking-wider uppercase mb-6">
+                    Agende sua primeira avaliação
+                  </span>
+                  <h3 class="text-3xl sm:text-4xl font-black tracking-tight leading-tight mb-6 font-display">
+                    Pronto para devolver a alegria máxima ao seu sorriso?
+                  </h3>
+                  <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-8 max-w-md font-semibold">
+                    Clique no botão abaixo para conversar conosco no WhatsApp. Agendamos consultas em menos de 2 minutos, sem burocracia e com o profissional ideal para sua necessidade.
+                  </p>
+                </div>
+                <div>
+                  <a href="https://wa.me/556282790106?text=Olá! Gostaria de agendar uma consulta odontologica na Sorridents do Garavelo." target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-8 py-5 rounded-2xl bg-[#009639] hover:bg-[#009639]/95 text-white font-extrabold text-lg shadow-xl cursor-pointer hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                    <i data-lucide="phone" class="w-6 h-6 mr-3"></i>
+                    Iniciar Conversa no WhatsApp
+                  </a>
+                  <div class="flex flex-wrap gap-4 items-center justify-center mt-6 text-xs text-blue-200 font-semibold">
+                    <span class="flex items-center"><span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-ping block"></span>Atendimento Online Agora</span>
+                    <span>•</span>
+                    <span>Avaliações completas</span>
+                    <span>•</span>
+                    <span>Planos facilitados</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Embedded Map -->
+          <div id="localizacao" class="mt-16 rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-white p-4">
+            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between p-4 gap-4 border-b border-slate-100 pb-4 mb-4">
+              <div>
+                <div class="flex flex-wrap gap-2 items-center">
+                  <span class="text-[10px] font-black uppercase tracking-wider bg-[#1b2074]/10 text-[#1b2074] px-2.5 py-1 rounded-md flex items-center gap-1">
+                    <i data-lucide="sparkles" class="w-3 h-3"></i>Localização Estratégica
+                  </span>
+                  <span class="text-[10px] font-bold text-slate-400">• Avenida da Igualdade</span>
+                </div>
+                <h3 class="text-lg font-black text-[#1b2074] mt-2 font-display">Visite nossa clínica em Aparecida de Goiânia</h3>
+                <p class="text-xs text-slate-500 mt-1 font-semibold">Setor Garavelo - Área comercial de facílimo acesso, com estacionamento privativo e recepção climatizada.</p>
+              </div>
+              <a href="https://maps.app.goo.gl/1mj4SZGZYQGaWLKn6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#00aeef] text-white text-xs font-bold hover:bg-[#00aeef]/90 transition cursor-pointer shrink-0">
+                <i data-lucide="navigation-2" class="w-4 h-4 mr-1.5 fill-white"></i>Abrir no GPS do Celular
+              </a>
+            </div>
+
+            <div class="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden bg-slate-100 shadow-inner">
+              <iframe
+                title="Localização da Sorridents Aparecida de Goiânia"
+                src="https://maps.google.com/maps?q=Sorridents%20Avenida%20da%20Igualdade%20Aparecida%20de%20Goi%C3%A2nia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                class="absolute inset-0 w-full h-full border-0"
+                allowfullscreen="true"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 11. RODAPÉ SECTION -->
+    <footer class="bg-[#0f172a] text-slate-400 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <!-- Col 1 -->
+          <div class="space-y-4">
+            <a href="#inicio" class="flex items-center space-x-2 select-none">
+              <img 
+                src="./logo-sorridents.png" 
+                alt="Sorridents" 
+                class="w-8 h-8 object-contain rounded-xl img-fallback"
+                data-fallback="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=120&q=80"
+                referrerpolicy="no-referrer"
+              />
+              <div class="flex flex-col leading-none">
+                <span class="font-black text-white text-lg tracking-tight">
+                  <span class="text-[#1b2074]">S</span><span class="text-[#e31c24]">o</span><span class="text-[#00aeef]">r</span><span class="text-[#009639]">r</span><span class="text-[#1b2074]">í</span><span class="text-[#e31c24]">d</span><span class="text-[#00aeef]">e</span><span class="text-[#009639]">n</span><span class="text-[#1b2074]">t</span><span class="text-[#00aeef]">s</span>
+                </span>
+                <span class="text-[7px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Clínicas Odontológicas</span>
+              </div>
+              <span class="text-[10px] bg-white/5 border border-white/10 text-[#00aeef] px-2 py-0.5 rounded font-bold uppercase tracking-widest leading-none">
+                Aparecida
+              </span>
+            </a>
+            <p class="text-sm text-slate-500 leading-relaxed max-w-xs font-semibold">Oferecendo tratamentos odontológicos modernos, humanizados e sofisticados em Aparecida de Goiânia. Resgatando seu prazer em sorrir.</p>
+          </div>
+
+          <!-- Col 2 -->
+          <div>
+            <h4 class="text-xs font-black uppercase text-white tracking-widest mb-6 border-b border-slate-800 pb-2">Navegação</h4>
+            <ul class="space-y-3 text-sm font-semibold">
+              <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+              <li><a href="#sobre" class="hover:text-white transition-colors">Quem Somos</a></li>
+              <li><a href="#diferenciais" class="hover:text-white transition-colors">Diferenciais</a></li>
+              <li><a href="#servicos" class="hover:text-white transition-colors">Especialidades</a></li>
+              <li><a href="#galeria" class="hover:text-white transition-colors">Galeria</a></li>
+              <li><a href="#depoimentos" class="hover:text-white transition-colors">Avaliações</a></li>
+              <li><a href="#faq" class="hover:text-white transition-colors">Dúvidas Frequentes</a></li>
+              <li><a href="#localizacao" class="hover:text-white transition-colors">Localização</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="space-y-4">
+            <h4 class="text-xs font-black uppercase text-white tracking-widest mb-6 border-b border-slate-800 pb-2">Unidade Aparecida</h4>
+            <div class="flex items-start space-x-3 text-sm leading-relaxed text-slate-400">
+              <i data-lucide="map-pin" class="w-5 h-5 text-[#00aeef] shrink-0 mt-0.5"></i>
+              <span class="font-semibold">QD 114, LT 20A, Avenida da Igualdade, Aparecida de Goiânia GO, 74930-530, Brasil</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm text-slate-400">
+              <i data-lucide="phone" class="w-5 h-5 text-[#00aeef] shrink-0"></i>
+              <a href="https://wa.me/556282790106" target="_blank" rel="noopener noreferrer" class="hover:text-white font-bold transition-colors">+55 62 8279-0106</a>
+            </div>
+          </div>
+
+          <!-- Col 4 -->
+          <div>
+            <h4 class="text-xs font-black uppercase text-white tracking-widest mb-6 border-b border-slate-800 pb-2">Horários</h4>
+            <ul class="space-y-2 text-sm text-slate-400 font-semibold md:max-w-xs">
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Segunda-feira:</span><span class="text-slate-550">08:00–19:00</span></li>
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Terça-feira:</span><span class="text-slate-550">08:00–19:00</span></li>
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Quarta-feira:</span><span class="text-slate-550">08:00–19:00</span></li>
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Quinta-feira:</span><span class="text-slate-550">08:00–19:00</span></li>
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Sexta-feira:</span><span class="text-slate-550">08:00–19:00</span></li>
+              <li class="flex justify-between border-b border-slate-800 pb-1"><span>Sábado:</span><span class="text-slate-550">08:00–13:00</span></li>
+              <li class="flex justify-between"><span>Domingo:</span><span class="text-slate-550">Fechado</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-800 mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-medium">
+          <div>
+            <p>© 2026 Sorridents Aparecida de Goiânia. Todos os direitos reservados.</p>
+            <p class="mt-1">
+              
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <button id="open-terms-modal-btn" class="hover:text-gray-300 font-semibold cursor-pointer focus:outline-none transition-colors">Termos de uso</button>
+            <button id="open-privacy-modal-btn" class="hover:text-gray-300 font-semibold cursor-pointer focus:outline-none transition-colors">Privacidade</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 11. FLOAT WHATSAPP WIDGET -->
+    <div id="float-whatsapp-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end hidden transition-all duration-300">
+      <!-- Popup message description bubble -->
+      <div id="float-whatsapp-tooltip" class="bg-white text-slate-800 text-xs font-bold px-4 py-2.5 rounded-2xl shadow-xl border border-gray-100 mb-2 mr-1 flex items-center space-x-2 max-w-xs transition-all duration-300 shadow-lg">
+        <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-ping shrink-0"></div>
+        <span>Atendimento no WhatsApp</span>
+        <button id="close-whatsapp-tooltip" class="text-gray-400 hover:text-gray-600 font-bold ml-2 text-[10px] focus:outline-none cursor-pointer">✕</button>
+      </div>
+
+      <!-- Main Anchor Floater -->
+      <a
+        href="https://wa.me/556282790106?text=Olá! Visitei o site oficial de Aparecida da Sorridents e gostaria de falar com um atendente."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl relative cursor-pointer hover:scale-110 active:scale-95 transition-all duration-300"
+        aria-label="Fale direto pelo WhatsApp"
+      >
+        <span class="absolute -inset-1 rounded-full bg-green-500/25 blur animate-ping -z-10"></span>
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.458h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- MODAL TERMS OF USE -->
+    <div id="terms-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm">
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] sm:max-h-[80vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-fadeInUp">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+          <h3 class="text-lg font-bold font-display text-slate-900">Termos de Uso</h3>
+          <button id="close-terms-btn" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <!-- Body (Scrollable) -->
+        <div class="p-6 overflow-y-auto text-sm text-slate-600 space-y-4 leading-relaxed scrollbar-thin">
+          <p class="font-semibold text-slate-800">Seja bem-vindo ao portal oficial da Sorridents Aparecida de Goiânia!</p>
+          <p>Ao navegar em nosso site, utilizar nossos canais de agendamento ou interagir com nossos serviços digitais, você concorda de forma integral e irrestrita com os seguintes termos e condições de uso aqui descritos:</p>
+          
+          <h4 class="font-bold text-slate-900 mt-4">1. Finalidade do Portal</h4>
+          <p>As informações publicadas no site têm caráter meramente informativo e de esclarecimento geral sobre as especialidades odontológicas oferecidas em nossa unidade. Elas não substituem, sob qualquer hipótese, uma consulta odontológica presencial, diagnóstico clínico ou avaliação personalizada por um cirurgião-dentista qualificado.</p>
+          
+          <h4 class="font-bold text-slate-900 mt-4">2. Agendamentos e Consultas</h4>
+          <p>O agendamento efetuado via WhatsApp ou formulário digital representa uma pré-reserva de horário sujeita a confirmação definitiva por nossa equipe de recepção. Reservamo-nos o direito de reagendar atendimentos em casos de urgência técnica ou profissional, comunicando previamente ao paciente pelos canais de contato informados.</p>
+
+          <h4 class="font-bold text-slate-900 mt-4">3. Direitos de Propriedade Intelectual</h4>
+          <p>Os conteúdos presentes neste site, incluindo textos, imagens, marcas e elementos visuais, são protegidos por direitos autorais e não podem ser copiados, reproduzidos ou utilizados sem autorização.</p>
+
+          <h4 class="font-bold text-slate-900 mt-4">4. Restrições de Uso</h4>
+          <p>O usuário se compromete a preencher informações verídicas em formulários digitais e em nossa linha direta de WhatsApp. É vedada qualquer ação que possa prejudicar a estabilidade do site ou de seus servidores, bem como tentativas de extração de dados confidenciais de pacientes.</p>
+
+          <h4 class="font-bold text-slate-900 mt-4">5. Alterações nos Termos</h4>
+          <p>Podemos atualizar estes Termos de Uso periodicamente, de forma unilateral, refletindo melhorias técnicas de nossa operação ou novas diretrizes do Conselho Regional de Odontologia de Goiás (CRO-GO). Recomendamos a consulta regular desta página.</p>
+
+          <p class="text-xs text-slate-400 pt-4">Última atualização: 1 de Junho de 2026. Sorridents Aparecida de Goiânia.</p>
+        </div>
+        <!-- Footer -->
+        <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+          <button id="close-terms-btn-footer" class="px-5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-md">
+            Entendi, fechar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL PRIVACY POLICY -->
+    <div id="privacy-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/60 backdrop-blur-sm">
+      <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] sm:max-h-[80vh] flex flex-col shadow-2xl border border-slate-100 overflow-hidden animate-fadeInUp">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100">
+          <h3 class="text-lg font-bold font-display text-slate-900">Política de Privacidade</h3>
+          <button id="close-privacy-btn" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <!-- Body (Scrollable) -->
+        <div class="p-6 overflow-y-auto text-sm text-slate-600 space-y-4 leading-relaxed scrollbar-thin">
+          <p class="font-semibold text-slate-800">A sua privacidade é uma prioridade absoluta para a Sorridents Aparecida de Goiânia!</p>
+          <p>Esta Política de Privacidade descreve de forma clara e transparente como tratamos, coletamos e protegemos os seus dados pessoais, em total conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018):</p>
+          
+          <h4 class="font-bold text-slate-900 mt-4">1. Dados que Coletamos</h4>
+          <p>Quando você interage conosco através do preenchimento de links de agendamento ou pelo botão de contato direto do WhatsApp, podemos processar dados essenciais como: Nome Completo, Número de Telefone/WhatsApp, e eventuais informações inseridas por você sobre o serviço odontológico desejado.</p>
+          
+          <h4 class="font-bold text-slate-900 mt-4">2. Finalidade do Tratamento</h4>
+          <p>Os seus dados pessoais são coletados e utilizados de forma estrita para:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Efetuar pré-agendamento de consultas ou responder a dúvidas;</li>
+            <li>Entrar em contato para relembrar o horário de atendimento marcado;</li>
+            <li>Enviar informações de saúde bucal relevantes, caso expressamente autorizado.</li>
+          </ul>
+
+          <h4 class="font-bold text-slate-900 mt-4">3. Compartilhamento e Proteção dos Dados</h4>
+          <p>Garantimos categoricamente que não vendemos, alugamos ou repassamos seus dados pessoais a terceiros estranhos ao grupo Sorridents. Suas informações são guardadas em servidores seguros, com controle rígido de acesso digital limitado somente aos profissionais credenciados que realizam o seu atendimento clínico ou operacional.</p>
+
+          <h4 class="font-bold text-slate-900 mt-4">4. Seus Direitos Legais (LGPD)</h4>
+          <p>Como titular dos dados, você possui total controle legal. A qualquer momento, solicitando pelo nosso WhatsApp (+55 62 8279-0106), você poderá exercer os direitos de: confirmação do tratamento de dados, acesso aos dados cadastrados, retificação ou correção de dados inexatos, e a revogação de consentimento ou exclusão de dados desnecessários.</p>
+
+          <h4 class="font-bold text-slate-900 mt-4">5. Uso de Cookies</h4>
+          <p>Nosso portal utiliza apenas cookies estritamente necessários para a correta exibição e carregamento dinâmico dos componentes interativos, sem monitoramento invasivo do seu histórico ou elaboração de perfis publicitários.</p>
+
+          <p class="text-xs text-slate-400 pt-4">Última atualização: 1 de Junho de 2026. Sorridents Aparecida de Goiânia.</p>
+        </div>
+        <!-- Footer -->
+        <div class="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+          <button id="close-privacy-btn-footer" class="px-5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all shadow-md">
+            Entendi, fechar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Main dynamic script loader -->
+    <script src="script.js"></script>
+  </body>
+</html>
